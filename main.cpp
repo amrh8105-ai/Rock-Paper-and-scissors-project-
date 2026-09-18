@@ -8,12 +8,13 @@ int main() {
     int rounds;
     cin >> rounds;
     int Sp=0, Sc=0 ;
-    int r = 1;
+    int r = 1 ;
+    srand(time(0));
+
 
     while (rounds --) {
         cout << "round " << r << endl;
         r++ ;
-        srand(time(0));
 
         int computerNumber = rand() % 3;
         char computer;
@@ -29,6 +30,10 @@ int main() {
         char player ;
         cout << "enter your choice (r/s/p)" << endl;
         cin >> player;
+        if (player!= 's' && player!= 'p' && player != 'r') {
+            cout << "invalid choice try again" << endl;
+            cin >> player;
+        }
 
         if (computer == player) {
             cout <<"the player chose : " << player << " " << "the computer chose : " << computer << endl;

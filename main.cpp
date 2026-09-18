@@ -30,8 +30,9 @@ int main() {
         char player ;
         cout << "enter your choice (r/s/p)" << endl;
         cin >> player;
-        if (player!= 's' && player!= 'p' && player != 'r') {
+        while (player!= 's' && player!= 'p' && player != 'r') {
             cout << "invalid choice try again" << endl;
+            cout << "the valid choices are (r/s/p)" << endl;
             cin >> player;
         }
 
